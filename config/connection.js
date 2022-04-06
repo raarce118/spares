@@ -1,28 +1,18 @@
-async function signupFormHandler(event) {
-    event.preventDefault();
-  
-    const username = document.querySelector('#username-signup').value.trim();
-    const email = document.querySelector('#email-signup').value.trim();
-    const password = document.querySelector('#password-signup').value.trim();
-  
-    if (username && email && password) {
-      const response = await fetch('/api/users', {
-        method: 'post',
-        body: JSON.stringify({
-          username,
-          email,
-          password
-        }),
-        headers: { 'Content-Type': 'application/json' }
-      });
-  
-      if (response.ok) {
-          console.log('Registration complete')
-        // document.location.replace('/');
-      } else {
-        alert(response.statusText);
-      }
-    }
-  }
+//import the Sequelize constructor from the library
+const Sequelize = require('sequelize');
 
-  document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
+require('dotenv').config();
+
+let sequelize;
+
+if (process.env.JAWSDB_URL) {
+  sequelize = new Sequelize(process.env.JAWSDB_URL);
+} else {
+   sequelize = new Sequelize('spares_db', 'root', 'N0vember8!', {
+  host: 'localhost',
+  dialect: 'mysql',
+  port: 3306
+});
+}
+
+module.exports = sequelize; 

@@ -16,26 +16,26 @@ const sequelize = require('../config/connection');
        },
 
 
-       purpose_name: {
+       reason: {
        type: DataTypes.STRING,
        allowNull: false,
        },
 
-   organs_id: {
+       reason_id: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: 'users',
+            key: 'id'
+        }
+    },
+
+   donations_id: {
        type: DataTypes.INTEGER,
        references: {
-           model: 'organs',
+           model: 'donations',
            key: 'id'
        }
-   },
-
-   biofluids_id: {
-    type: DataTypes.INTEGER,
-    references: {
-        model: 'biofluids',
-        key: 'id'
-    }
-}
+   }
 },
 
    {

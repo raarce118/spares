@@ -1,23 +1,15 @@
 const router = require('express').Router();
-const { users, organs, biofluids, purpose } = require('../../models');
+const { donations, purpose } = require('../../models');
 
 
-// get all organs
+// get all purposes
 router.get('/', (req, res) => {
 purpose.findAll (
   {
     include : [
         {
-            model: users,
-            attributes : [ 'id']
-        },
-      {
-      model: organs,
-      attributes : [ 'id', 'organ_name']
-  },
-  {
-    model: biofluids,
-    attributes: [ 'id', 'biofluids_name']
+            model: donations,
+            attributes : [ 'id', 'reason_donated']
   }]
 })
 .then(purposeData => res.json(purposeData))
@@ -29,25 +21,17 @@ purpose.findAll (
 
 // get one purpose
 router.get('/:id', (req, res) => {
-    organs.findOne (
+    purpose.findOne (
       {
         where : {
             id: req.params.id
       },
       include : [
         {
-            model: users,
-            attributes : [ 'id']
+            model: donations,
+            attributes : [ 'id', 'reason_donated']
         },
-      {
-      model: organs,
-      attributes : [ 'id', 'organ_name']
-  },
-  {
-    model: biofluids,
-    attributes: [ 'id', 'biofluids_name']
-  }]
-        })
+]})
      .then(purposeData => res.json(purposeData))
      .catch(err => {
       console.log(err);
@@ -90,7 +74,7 @@ router.get('/:id', (req, res) => {
       })
       .then(purposeData => {
         if(!purposeData) {
-          res.status(404).json({ message: 'purposedoes not exist'});
+          res.status(404).json({ message: 'purpose does not exist'});
           return;
         }
         res.json(purposeData);

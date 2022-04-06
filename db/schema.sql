@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS spareparts_db;
+DROP DATABASE IF EXISTS spares_db;
 
-CREATE DATABASE spareparts_db;
+CREATE DATABASE spares_db;

@@ -1,7 +1,6 @@
 const seedUsers = require('./users-seeds');
 const seedPurpose = require('./purpose-seeds');
-const seedOrgans = require('./organ-seeds');
-const seedBiofluids = require('./biofluids-seeds');
+const seedDonations = require('./donations-seeds');
 
 const sequelize = require('../config/connection');
 
@@ -14,11 +13,8 @@ const seedAll = async () => {
     await seedPurpose();
     console.log('\n----- PURPOSE SEEDED -----\n');
   
-    await seedOrgans();
-    console.log('\n----- ORGANS SEEDED -----\n');
-  
-    await seedBiofluids();
-    console.log('\n----- BIOFLUIDS SEEDED -----\n');
+    await seedDonations();
+    console.log('\n----- DONATIONS SEEDED -----\n');
   
     process.exit(0);
   };

@@ -19,16 +19,16 @@ const sequelize = require('../config/connection');
              primaryKey: true,
              autoIncrement: true
          },
-         organs_name: {
+         organs_donated: {
              type: DataTypes.STRING,
              allowNull: false
          },
 
-         biofluids_name: {
+         biofluids_donated: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        purpose_name: {
+        reason: {
             type: DataTypes.STRING,
             allowNull: false
         },
