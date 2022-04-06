@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
+    <link rel="stylesheet" href="./public/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+   
+    <title>Spare Parts</title>
+
+</head>
+<body>
+    <main>
+        <header>
+            <h1 class="m-title" id="glow">Spare Parts</h1>
+        </header>
+    </main>
+
+    <div class="description">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat fugit perferendis commodi, aliquid, hic nihil doloremque iure iste</p>
+    </div>
+
+    <!-- user validation start -->
+    <div>
+        <h2 class="login">Login</h2>
+    </div>
+    <form>
+        <!-- login -->
+        <div>
+            <h3 class="credentials">Email:</h3>
+            <input type="text" class="user-text"></input>
+        </div>
+        <div>
+            <h3 class="credentials">Password</h3>
+            <input type="text" class="user-text"></input>
+        </div>
+        <div>
+            <button class="enter-btn">Login</button>
+        </div>
+    </form>
+        
+    <div>    
+        <h2 class="register">Register</h2>
+    </div>
+
+    <form>
+        <!-- Register -->
+        <div>
+            <h3 class="credentials">Email:</h3>
+            <input type="text" class="user-text"></input>
+        </div>
+        <div>
+            <h3 class="credentials">Username:</h3>
+            <input type="text" class="user-text"></input>
+        </div>
+        <div>
+            <h3 class="credentials">Password:</h3>
+            <input type="text" class="user-text"></input>
+        </div>
+        <div>
+            <!-- dropdown for profile type -->
+            <label class="credentials" for="profile-types">Profile Type:</label>
+        </br>
+            <select class="user-text" name="profile-types" id="profile-types">
+                <option value="Doctor">None</option>
+                <option value="Doctor">Doctor</option>
+                <option value="Donor">Donor</option>
+                <option value="Recipient">Recipient</option>
+            </select>
+        </br>
+            <button class="enter-btn">Register</button>
+        </div>
+    </form>
+    
+    
+</body>
+</html>
