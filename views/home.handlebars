@@ -1,18 +1,7 @@
-<header>
-        <h1 class="m-title" id="glow">Spare Parts</h1>
-</header>
+<ol class="donation-list">
+  {{#each donations as |donations|}}
+ 
+    {{> donations-details }}
 
-    <div class="description">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat fugit perferendis commodi, aliquid, hic nihil doloremque iure iste</p>
-    </div>
-    <!-- user validation start -->
-
-    <div>
-        <h2 class="login">Login</h2>
-    </div>
-{{>login}}
-
-    <div>    
-        <h2 class="register">Register</h2>
-    </div>
-{{>register}}
+  {{/each}}
+</ol>

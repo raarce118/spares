@@ -1,0 +1,65 @@
+/* whole page */
+* {
+    font-family: monospace;
+    color: white;
+}
+
+/* background image  */
+html {
+    background: url(../content/images/anatomy.png);
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+/* main header */
+.m-title {
+    font-size: 85px;
+    margin: 10px 0 0 130px;
+}
+
+/* site description */
+.description {
+    margin: 0 550px 0 130px;
+}
+
+/* login/register headers */
+.login, .register {
+    font-size: 30px;
+    margin: 20px 0 0 130px;
+}
+
+/* user input enter btn */
+.enter-btn {
+    margin: 10px 0 0 130px;
+    color: black;
+    font-size: 15px;
+    font-family: monospace;
+}
+
+/* credentials (user input) */
+.credentials {
+    margin-left: 130px;
+}
+
+/* text boxes for login/logout */
+.user-text {
+    height: 30px;
+    width: 225px;
+    font-size: 20px;
+    margin-left: 130px;
+    color: black;
+
+}
+
+.organ-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  .biofluids-list {
+    margin: 0;
+    padding: 0;
+  }
+

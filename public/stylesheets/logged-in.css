@@ -1,0 +1,48 @@
+* {
+    font-family: monospace;
+    color: white;
+    /* background-color: black; */
+ }
+ 
+ /* background image ?????? */
+ html {
+     background: url(../content/images/anatomy.png);
+     background-position: center;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-size: cover;
+     /* height: 100%; */
+ }
+ 
+ /* page description */
+ .page-description {
+     /* padding: 50px 20px 0 20px; */
+     margin: 0 600px 0 70px;
+ }
+ 
+ /* directions title */
+ .directions {
+     margin: 20px 0 20px 0;
+     font-size: 40px;
+     text-align: center;
+ }
+ 
+ /* sub headers */
+ /* .h-organs, .h-bio{
+     font-size: 40px;
+     text-align: left;
+     font-weight: normal;
+     margin: 50px 0 0 100px;
+ } */
+ 
+ /* tiles */
+ .tile {
+     margin: 60px 20px 0 160px;
+     font-size: 20px;
+     text-align: center; 
+ }
+ 
+ /* bio-fluids tiles */
+ /* #b-fluids {
+     padding-bottom: 100%;
+ } */

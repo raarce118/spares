@@ -10,15 +10,20 @@
 </head>
 
 <body>
-    
-
-    <main>
-        {{{ body }}}
-    </main>
-
-    {{#if loggedIn}}
-    <script src="/javascript/logout.js"></script>
-    {{/if}}
+  <div class="wrapper">
+    <header>
+      <h1>
+        <a href="/">Donations</a>
+      </h1>
+    </header>
+    <div class="donations">
+      {{{body}}}
+    </div>
+    <footer>
+      Thanks for visiting!
+    </footer>
+  </div>
 
 </body>
+
 </html>
