@@ -52,6 +52,11 @@ html {
     color: black;
 
 }
+/* Here is the new stuff I added */
+.donation-list {
+    margin: 0;
+    padding: 0;
+  }
 
 .organ-list {
     margin: 0;
